@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr" id="html_0dbe_0">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/bed0e489c0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
+    <script src="routes/camera.js"></script>
+    <title>Projet 5 - Clément Sentein</title>
+</head>
+
+<body>
+
+    <!-- Début Header -->
+    <header>
+        <img alt="OrniconoLogo" class="headerlogo" onclick="index.html" src="../Backend/images/Logo.png">
+        <nav>
+            <a href="index.html" class="navlink_1">Accueil</a>
+            <a href="cart.html" class="navcart"><i class="fas fa-cart-arrow-down"></i></a>
+        </nav>
+    </header>
+    <!-- Fin Header -->
+
+    <main>
+
+        <!-- Début liste de Produits et formulaire -->
+        <section>
+            <div class="product">
+                <div class="desc_product">
+                    <div id="id_products"></div>
+                    <h3 class="text-align-center">Formulaire :</h3><br>
+                    <form method="post" id="form-1" class="form_cart">
+                        <input type="text" id="first_name" required name="firstName" placeholder="Prénom">
+                        <input type="text" id="last_name" required name="lastName" placeholder="Nom">
+                        <br><br>
+                        <input class="width100" id="email" type="email" required name="email"
+                            placeholder="Adresse email">
+                        <br><br>
+                        <input type="text" id="address" required name="address" placeholder="Adresse postale">
+                        <input type="text" id="city" required name="city" placeholder="Ville">
+                        <br><br>
+                        <div class="totalprice">Prix total : <span id="price"></span></div>
+                        <button type="submit" class="button_product submitbutton">Passer
+                            à la caisse -></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Fin liste de Produits et formulaire -->
+
+        <script src="cart.js"></script>
+
+    </main>
+    <!-- Début Footer -->
+    <footer>
+        <a class="footerlink" href="">À propos</a>
+        <a class="footerlink" href="">C.G.V. - C.G.U.</a>
+        <a class="footerlink" href="">Politique de remboursement</a>
+        <a class="footerlink" href="">Politique de confidentialité</a>
+    </footer>
+    <!-- Fin Footer -->
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr" id="html_0dbe_0">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/bed0e489c0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
+    <script src="routes/camera.js"></script>
+    <title>Projet 5 - Clément Sentein</title>
+</head>
+
+<body>
+
+    <!-- Début Header -->
+    <header>
+        <img alt="OrniconoLogo" class="headerlogo" onclick="index.html" src="../Backend/images/Logo.png">
+        <nav>
+            <a href="index.html" class="navlink_1">Accueil</a>
+            <a href="cart.html" class="navcart"><i class="fas fa-cart-arrow-down"></i></a>
+        </nav>
+    </header>
+    <!-- Fin Header -->
+
+    <main>
+
+        <!-- Début Produits -->
+        <section>
+            <div class="product">
+                <div class="desc_product">
+                    <h3 class="text-align-center">Confirmation commande :</h3><br>
+                    Merci <span id="name" class="font-weight-bold"></span> pour votre commande,
+                    <br><br>
+                    <span>
+                        Prix total : <span class="font-weight-bold" id="price"></span>,
+                    </span>
+                    <br><br>
+                    <span>Identifiant de commande : <span class="font-weight-bold" id="order-id"></span></span>
+                </div>
+            </div>
+        </section>
+        <script src="order-confirmation.js"></script>
+        <!-- Fin Produits -->
+
+    </main>
+
+    <!-- Début Footer -->
+    <footer>
+        <a class="footerlink" href="">À propos</a>
+        <a class="footerlink" href="">C.G.V. - C.G.U.</a>
+        <a class="footerlink" href="">Politique de remboursement</a>
+        <a class="footerlink" href="">Politique de confidentialité</a>
+    </footer>
+    <!-- Fin Footer -->
+
+</body>
+
+</html>
