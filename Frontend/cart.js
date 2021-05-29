@@ -88,7 +88,6 @@ function deleteCartProduct(element, index) {
 }
 
 function sendForm() {
-    console.log('sendForm()')
 
     // Création de l'item "name" et modification de sa valeur par le first name, un espace et le last name envoyé dans le formulaire précédent. Cela nous sera utile pour la page "order-confirmation"
     localStorage.setItem("name", document.getElementById('first_name').value + ' ' + document.getElementById('last_name').value);
