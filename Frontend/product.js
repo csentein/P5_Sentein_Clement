@@ -59,17 +59,10 @@ function addToCart() {
         cart = JSON.parse(localStorage.getItem('cart'));
     }
 
-    // Affichage en chaine de caractères
-    console.log("3", localStorage.getItem('cart'))
-
-    // Affichage d'une liste contenant les 5 objets correspondant à chaque caméra
-    console.log("3", cart)
-
     // Vérification que la variable "cart" est bien une liste
     if (!Array.isArray(cart) || cart == null) {
         cart = [];
-        console.log("La variable Cart n'est pas une liste");
-    }
+}
 
     let title = document.getElementById('camera-title').innerText;
     let price = document.getElementById('camera-price').innerText;
