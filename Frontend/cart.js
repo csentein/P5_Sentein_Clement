@@ -50,7 +50,6 @@ let elements = document.getElementsByClassName("cart-btn2");
 for (let i = 0; i < elements.length; i++) {
 
     elements[i].addEventListener("click", function () {
-        console.log('5', elements[i]);
         deleteCartProduct(document.getElementById('btn-close-' + i), document.getElementById('btn-close-' + i).getAttribute("data-index"))
     }, false)
 }
@@ -61,20 +60,14 @@ document.getElementById('form-1').addEventListener('submit', function (event) {
     event.preventDefault();
 }, false);
 
-console.log(document.getElementById('form-1'));
-
 // Supprimer le "onclick" en inline HTML
 
-console.log('4', products, title, image, lense, price, index)
 
 document.getElementById("price").innerText = totalPrice;
-console.log(totalPrice);
 
 // Fonction permettant de supprimer un produit spécifique du tableau "products"
 function deleteCartProduct(element, index) {
     let price = parseInt(element.parentNode.querySelector('.product-price').innerText)
-
-    console.log('price', price)
 
     // Suppression du parent de l'élément sélectionné (tout le bloc du produit)
     element.parentNode.remove()
