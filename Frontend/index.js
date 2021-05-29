@@ -6,12 +6,10 @@ var xhr = new XMLHttpRequest();
 // Quand la variable "xhr" fait un appel, le code s'execute par la suite :
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
-        console.log(xhr.responseText);
         let data = JSON.parse(xhr.responseText);
         let HTML = "";
         for (let i = 0; i < data.length; i++) {
             let currentData = data[i];
-            console.log(currentData);
             // Début de la génération de l'HTML
             HTML += `<a class="sectioncamera_container">
     <a href="product.html?id=${currentData["_id"]}" class="sectioncamera">
