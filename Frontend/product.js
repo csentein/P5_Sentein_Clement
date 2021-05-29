@@ -8,15 +8,12 @@ xhr.onreadystatechange = function () {
 
     // L'AJAX a bien été reçu dans la variable "xhr"
     if (xhr.readyState === 4) {
-        console.log(xhr.responseText); // Réponse de l'appel en chaîne de caracètères
-        console.log(JSON.parse(xhr.responseText)); // Réponse de l'appel en objet (grace a la méthode "JSON.parse qui convertit un string en object")
         let data = JSON.parse(xhr.responseText);
         document.getElementById('camera-title').innerText = data["name"];
         document.getElementById('camera-description').innerText = data["description"];
         document.getElementById('camera-img').src = data["imageUrl"];
         document.getElementById('camera-price').innerText = data["price"];
         for (let i = 0; i < data["lenses"].length; i++) {
-            console.log(data["lenses"][i])
             document.getElementById('lenses').innerHTML +=
                 // Début de la génération du code HTML pour "lenses" (objectif de la camera)
                 `<option name="${data["lenses"][i]}" class="cameraselector">${data["lenses"][i]}
@@ -30,16 +27,13 @@ xhr.onreadystatechange = function () {
 
 /* Récupération des paramètres de l'URL actuelle (ex. de paramètre : ?id=17238123)
 var queryString = window.location.search;
-console.log("1", queryString);
 */
 
 // Récupération des paramètres de l'URL actuelle (ex. de paramètre : ?id=17238123) & Modification du formatage avec la méthode "new URLSearchParams"
 var urlParams = new URLSearchParams(window.location.search);
-console.log("2", urlParams);
 
 // Récupération d'un paramètre spécifique, en l'occurence "id" dans notre cas (ex. : 17238123)
 var id = urlParams.get('id')
-console.log("3", id);
 
 // Initialisation de la méthode GET (affichage des paramètres dans l'URL avec la forme "?id=1273")
 xhr.open('GET', 'http://localhost:3000/api/cameras/' + id);
